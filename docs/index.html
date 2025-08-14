@@ -1,4 +1,5 @@
 <!doctype html>
+<head>
 <html lang="en">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -18,9 +19,53 @@
   .label { width:100%; padding:12px 14px; font-weight:600; letter-spacing:.2px; }
   .tile:hover { transform: translateY(-2px); transition: transform .15s ease; }
 </style>
-<script>
-  // Random background from Unsplash
-  document.body.style.backgroundImage = `url('https://source.unsplash.com/random/1920x1080/?nature,technology')`;
+<!-- Put this in <head> -->
+<style>
+  :root { --bg-fallback: #0f1115; }
+  body {
+    background: var(--bg-fallback) no-repeat center/cover fixed;
+  }
+  /* Optional readability overlay */
+  .bg-overlay{
+    position: fixed; inset: 0;
+    pointer-events: none;
+    background: radial-gradient(transparent, rgba(0,0,0,.35) 60%);
+  }
+</style>
+<script defer>
+(function () {
+  function randomUnsplashUrl() {
+    // keywords: change to what you like (nature, city, abstract, etc.)
+    const q = "nature,technology,gradient,texture";
+    // Adding a cache-buster so you get a different image more often
+    const bust = Math.floor(Math.random()*1e9);
+    return `https://source.unsplash.com/random/1920x1080/?${encodeURIComponent(q)}&sig=${bust}`;
+  }
+
+  function setBg(url){
+    // Only set the background after the image is actually loadable
+    const img = new Image();
+    img.onload = function () {
+      document.body.style.backgroundImage = `url('${url}')`;
+      // add overlay once
+      if (!document.querySelector('.bg-overlay')) {
+        const ov = document.createElement('div');
+        ov.className = 'bg-overlay';
+        document.body.appendChild(ov);
+      }
+    };
+    img.onerror = function () {
+      // keep fallback color if it fails
+      console.warn("Background image failed to load:", url);
+    };
+    img.src = url;
+  }
+
+  // Run after DOM is ready (defensive even though we used defer)
+  window.addEventListener('DOMContentLoaded', function(){
+    setBg(randomUnsplashUrl());
+  });
+})();
 </script>
 <!--<script>-->
 <!--async function setRandomBackground() {-->
@@ -35,7 +80,8 @@
 <!--}-->
 <!--setRandomBackground();-->
 <!--</script>-->
-
+</head>
+<body>
 <div class="wrap">
   <h1>Start</h1>
   <div class="grid">
@@ -78,4 +124,5 @@
     <!-- duplicate blocks, change img+href+label -->
   </div>
 </div>
+</body>
 </html>
