@@ -12,4 +12,31 @@
   url: https://youtube.com
   img: /images/youtube-2.png
   order: 3
-# ...add as many tiles as you like
+- title: Render
+  url: https://render.com
+  img: /images/render.jpg
+  order: 4
+- title: RunwayML
+  url: https://runwayml.com
+  img: /images/runwayml.jpg
+  order: 5
+- title: MidJourney
+  url: https://midjourney.com
+  img: /images/midjourney.png
+  order: 6
+- title: OpenAi
+  url: https://platform.openai.com
+  img: /images/openai56.jpg
+  order: 7
+- title: Blog+Resume
+  url: https://nishith.is-a.dev
+  img: /images/profile_pic.png
+  order: 8
+- title: Gmail
+  url: https://mail.google.com
+  img: /images/gmail.jpg
+  order: 9
+- title: OpenAi
+  url: https://platform.openai.com
+  img: /images/openai56.jpg
+  order: 10
