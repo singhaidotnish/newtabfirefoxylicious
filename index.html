@@ -1,0 +1,18 @@
+---
+layout: default
+title: My Start
+---
+
+<div class="wrap">
+  <h1>Start</h1>
+
+  <div class="grid">
+    {% assign tiles = site.data.tiles | sort: 'order' %}
+    {% for t in tiles %}
+      <div class="tile">
+        <img src="{{ t.img | relative_url }}" alt="">
+        <a href="{{ t.url }}"><span class="label">{{ t.title }}</span></a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
