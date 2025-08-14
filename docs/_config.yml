@@ -1,0 +1,5 @@
+# required so relative_url works under /<repo-name>/
+baseurl: /newtabfirefoxylicious
+# keep Jekyll simple
+markdown: kramdown
+theme: null
