@@ -1,26 +1,28 @@
 .
-├── bg.js
-├── _config.yml
 ├── docs
+│   ├── bg.js
+│   ├── _config.yml
 │   ├── _data
 │   │   └── tiles.yml
 │   ├── images
+│   │   ├── bitwarden.png
 │   │   ├── chatgpt.png
 │   │   ├── github.png
 │   │   ├── gmail.jpg
 │   │   ├── gmail.webp
 │   │   ├── midjourney.png
+│   │   ├── nmmc.png
 │   │   ├── openai.jpg
 │   │   ├── profile_pic.png
 │   │   ├── render.jpg
 │   │   ├── runwayml.jpg
 │   │   ├── youtube-2.png
 │   │   └── youtube.png
-│   └── _layouts
-│       └── default.html
-├── index.html
+│   ├── index.html
+│   ├── _layouts
+│   │   └── default.html
+│   └── styles.css
 ├── README.md
-├── styles.css
 └── tree-structure.txt
 
-4 directories, 19 files
+4 directories, 21 files
