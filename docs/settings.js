@@ -14,6 +14,13 @@
     return ids.every((id) => $(id));
   }
 
+  function setBackground(imageUrl) {
+    document.body.style.backgroundImage = `url('${imageUrl}')`;
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundRepeat = 'no-repeat';
+    document.body.style.backgroundPosition = 'center center';
+  }
+
   // Apply background to <body>
   function applyBackground({ mode, color, image, fit }) {
     const b = document.body;
