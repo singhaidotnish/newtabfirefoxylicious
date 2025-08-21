@@ -145,13 +145,25 @@
       panel.hidden = true;
     });
 
-    resetBtn.addEventListener('click', () => {
+    resetBtn.addEventListener('click', async () => {
       localStorage.removeItem(LS_KEYS.mode);
       localStorage.removeItem(LS_KEYS.color);
       localStorage.removeItem(LS_KEYS.image);
       localStorage.removeItem(LS_KEYS.fit);
-      loadPrefs();
+
+      // Fetch a fresh Pexels background
+      try {
+        const url = await pexelsUrl();   // reuse your async Pexels fetcher
+        document.body.style.backgroundImage = `url('${url}')`;
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundRepeat = 'no-repeat';
+        document.body.style.backgroundPosition = 'center center';
+      } catch (e) {
+        console.warn('Reset fetch failed, falling back to default:', e);
+        loadPrefs();
+      }
     });
+
 
     // Initial load
     loadPrefs();

@@ -26,7 +26,7 @@
   order: 6
 - title: OpenAi
   url: https://platform.openai.com
-  img: /images/openai56.jpg
+  img: /images/openai.jpg
   order: 7
 - title: Blog+Resume
   url: https://nishith.is-a.dev
@@ -38,11 +38,11 @@
   order: 9
 - title: OpenAi
   url: https://platform.openai.com
-  img: /images/openai56.jpg
+  img: /images/openai.jpg
   order: 10
 - title: Neo Titanium Global Energy
   url: https://zarir-engineer.github.io/neo-titanium-global-enery/
-  img: /projects/neo-titanium-mp.jpg
+  img: /projects/neo-titanium-mp.png
   order: 11
 - title: BitWarden
   url: https://vault.bitwarden.com/#/login
