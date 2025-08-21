@@ -16,13 +16,16 @@ async function pexelsUrl() {
   return data.photos[0].src.landscape;
 }
 
+function setBackground(url) {
+  document.body.style.backgroundImage = `url('${url}')`;
+  document.body.style.backgroundSize = 'cover';
+  document.body.style.backgroundRepeat = 'no-repeat';
+  document.body.style.backgroundPosition = 'center center';
+}
+
 window.addEventListener('DOMContentLoaded', async () => {
   try {
-    const url = await pexelsUrl();
-    document.body.style.backgroundImage = `url('${url}')`;
-    document.body.style.backgroundSize = 'cover';
-    document.body.style.backgroundRepeat = 'no-repeat';
-    document.body.style.backgroundPosition = 'center center';
+    setBackground(await pexelsUrl());
   } catch (e) {
     console.warn('Pexels background failed:', e);
   }
