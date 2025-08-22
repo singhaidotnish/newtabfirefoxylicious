@@ -55,4 +55,9 @@
 - title: Jira - Elemen
   url:  https://elemen.atlassian.net/jira/projects?page=1&sortKey=name&sortOrder=ASC&types=software%2Cbusiness
   img: /images/elemen.png
-  order: 13
+  order: 14
+- title: Jira - Appler
+  url:  https://appler.atlassian.net/jira/projects?page=1&sortKey=name&sortOrder=ASC&types=software%2Cbusiness
+  img: /images/appler.png
+  order: 15
+
