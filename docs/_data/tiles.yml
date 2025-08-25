@@ -60,4 +60,7 @@
   url:  https://appler.atlassian.net/jira/projects?page=1&sortKey=name&sortOrder=ASC&types=software%2Cbusiness
   img: /images/appler.png
   order: 15
-
+- title: pCloud
+  url:  https://my.pcloud.com/
+  img: /images/pcloud.png
+  order: 16
