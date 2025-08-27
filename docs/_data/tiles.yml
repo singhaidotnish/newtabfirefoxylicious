@@ -64,3 +64,16 @@
   url:  https://my.pcloud.com/
   img: /images/pcloud.png
   order: 16
+- title: Whatsapp
+  url:  https://web.whatsapp.com/
+  img: /images/whatsapp.png
+  order: 17
+- title: Sensibull
+  url:  https://www.sensibull.com/
+  img: /images/sensibull.png
+  order: 18
+- title: Kite-Zerodha
+  url:  https://www.kite.com/
+  img: /images/kite.png
+  order: 19
+
