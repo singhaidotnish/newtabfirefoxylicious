@@ -26,9 +26,9 @@
   url: https://platform.openai.com
   img: /images/openai.jpg
   order: 7
-- title: Blog+Resume
-  url: https://nishith.is-a.dev
-  img: /images/profile_pic.jpg
+- title: MP3 from youtube
+  url: https://y2mate.nu/R2lu/
+  img: /images/y2mate.png
   order: 8
 - title: Gmail
   url: https://mail.google.com
@@ -78,4 +78,8 @@
   url:  https://www.nmmc.gov.in/property-tax
   img: /images/nmmc.png
   order: 20
+- title: Blog+Resume
+  url: https://nishith.is-a.dev
+  img: /images/profile_pic.jpg
+  order: 21
 
