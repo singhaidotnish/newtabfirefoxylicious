@@ -46,9 +46,9 @@
   url: https://vault.bitwarden.com/#/login
   img: /images/bitwarden.png
   order: 5
-- title: NMMC
-  url:  https://www.nmmc.gov.in/property-tax
-  img: /images/nmmc.png
+- title: Cloudinary
+  url:  https://cloudinary.com/users/login
+  img: /images/cloudinary.png
   order: 13
 - title: Jira - Elemen
   url:  https://elemen.atlassian.net/jira/projects?page=1&sortKey=name&sortOrder=ASC&types=software%2Cbusiness
@@ -74,4 +74,8 @@
   url:  https://www.kite.com/
   img: /images/kite.png
   order: 19
+- title: NMMC
+  url:  https://www.nmmc.gov.in/property-tax
+  img: /images/nmmc.png
+  order: 20
 
