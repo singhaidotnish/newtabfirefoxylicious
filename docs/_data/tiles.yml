@@ -48,7 +48,7 @@
   order: 5
 - title: Cloudinary
   url:  https://cloudinary.com/users/login
-  img: /images/cloudinary.png
+  img: /images/cloudinary.jpg
   order: 13
 - title: Jira - Elemen
   url:  https://elemen.atlassian.net/jira/projects?page=1&sortKey=name&sortOrder=ASC&types=software%2Cbusiness
