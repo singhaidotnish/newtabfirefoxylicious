@@ -22,9 +22,9 @@
   url: https://midjourney.com
   img: /images/midjourney.png
   order: 6
-- title: OpenAi
-  url: https://platform.openai.com
-  img: /images/openai.jpg
+- title: Blog+Resume
+  url: https://nishith.is-a.dev
+  img: /images/profile_pic.jpg
   order: 7
 - title: MP3 from youtube
   url: https://y2mate.nu/R2lu/
@@ -78,8 +78,7 @@
   url:  https://www.nmmc.gov.in/property-tax
   img: /images/nmmc.png
   order: 20
-- title: Blog+Resume
-  url: https://nishith.is-a.dev
-  img: /images/profile_pic.jpg
+- title: electronic gt's
+  url:  https://makerbazar.in
+  img: /images/makerbazar.png
   order: 21
-
