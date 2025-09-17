@@ -86,3 +86,8 @@
   url: https://youtube.com/@decisionpointorg?si=zHr7l9zunMz_WTAS
   img: /images/makerbazar.png
   order: 22
+- title: google search console
+  url: https://search.google.com/search-console?resource_id=https%3A%2F%2Fnishith.is-a.dev%2F
+  img: /images/search-console-google.png
+  order: 23
+
