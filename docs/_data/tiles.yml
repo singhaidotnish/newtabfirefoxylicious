@@ -90,4 +90,11 @@
   url: https://search.google.com/search-console?resource_id=https%3A%2F%2Fnishith.is-a.dev%2F
   img: /images/search-console-google.png
   order: 23
-
+- title: Claude.ai
+  url: https://claude.ai/
+  img: /images/claude.png
+  order: 24
+- title: Deepseek
+  url: https://chat.deepseek.com/sign_in
+  img: /images/deepseek.jpeg
+  order: 25
