@@ -98,3 +98,7 @@
   url: https://chat.deepseek.com/sign_in
   img: /images/deepseek.jpeg
   order: 25
+- title: Perplexity
+  url: https://www.perplexity.ai/?login
+  img: /images/perplexity.png
+  order: 26
