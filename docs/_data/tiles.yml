@@ -74,35 +74,35 @@
   url:  https://www.kite.com/
   img: /images/kite.png
   order: 19
+- title: Streak
+  url: https://www.streak.tech/login
+  img: /images/streak.jpg
+  order: 20
 - title: NMMC
   url:  https://www.nmmc.gov.in/property-tax
   img: /images/nmmc.png
-  order: 20
+  order: 21
 - title: electronic gt's
   url:  https://makerbazar.in
   img: /images/makerbazar.png
-  order: 21
+  order: 22
 - title: decision point
   url: https://youtube.com/@decisionpointorg?si=zHr7l9zunMz_WTAS
   img: /images/makerbazar.png
-  order: 22
+  order: 23
 - title: google search console
   url: https://search.google.com/search-console?resource_id=https%3A%2F%2Fnishith.is-a.dev%2F
   img: /images/search-console-google.png
-  order: 23
+  order: 24
 - title: Claude.ai
   url: https://claude.ai/
   img: /images/claude.png
-  order: 24
+  order: 25
 - title: Deepseek
   url: https://chat.deepseek.com/sign_in
   img: /images/deepseek.jpeg
-  order: 25
+  order: 26
 - title: Perplexity
   url: https://www.perplexity.ai/?login
   img: /images/perplexity.png
-  order: 26
-- title: Streak 
-  url: https://www.streak.tech/login
-  img: /images/streak.jpg
   order: 27
