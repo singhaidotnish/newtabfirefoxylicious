@@ -102,3 +102,7 @@
   url: https://www.perplexity.ai/?login
   img: /images/perplexity.png
   order: 26
+- title: Streak 
+  url: https://www.streak.tech/login
+  img: /images/streak.jpg
+  order: 27
