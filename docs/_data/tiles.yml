@@ -21,19 +21,19 @@
 - title: MidJourney
   url: https://midjourney.com
   img: /images/midjourney.png
-  order: 6
+  order: 26
 - title: Blog+Resume
   url: https://nishith.is-a.dev
   img: /images/profile_pic.jpg
-  order: 7
+  order: 27
 - title: MP3 from youtube
   url: https://y2mate.nu/R2lu/
   img: /images/y2mate.png
-  order: 8
+  order: 28
 - title: Gmail
   url: https://mail.google.com
   img: /images/gmail.jpg
-  order: 9
+  order: 29
 - title: OpenAi
   url: https://platform.openai.com
   img: /images/openai.jpg
@@ -81,14 +81,14 @@
 - title: NMMC
   url:  https://www.nmmc.gov.in/property-tax
   img: /images/nmmc.png
-  order: 21
-- title: electronic gt's
+  order: 30
+- title: Electronic gt's
   url:  https://makerbazar.in
   img: /images/makerbazar.png
-  order: 22
-- title: decision point
+  order: 9
+- title: Decision Point
   url: https://youtube.com/@decisionpointorg?si=zHr7l9zunMz_WTAS
-  img: /images/makerbazar.png
+  img: /images/decision-point.jpg
   order: 23
 - title: google search console
   url: https://search.google.com/search-console?resource_id=https%3A%2F%2Fnishith.is-a.dev%2F
@@ -101,8 +101,12 @@
 - title: Deepseek
   url: https://chat.deepseek.com/sign_in
   img: /images/deepseek.jpeg
-  order: 26
+  order: 6
 - title: Perplexity
   url: https://www.perplexity.ai/?login
   img: /images/perplexity.png
-  order: 27
+  order: 7
+- title: Meta Ai
+  url: https://www.meta.ai/
+  img: /images/meta-ai.jpeg
+  order: 8
