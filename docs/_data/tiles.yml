@@ -6,6 +6,11 @@
   url: https://claude.ai/
   img: /images/claude.png
   order: 2
+- title: Cursor Code editor
+  url: https://cursor.com/
+  img: /images/claude.png
+  order: 2
+
 - title: GitHub
   url: https://github.com
   img: /images/github.png
