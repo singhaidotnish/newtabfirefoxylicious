@@ -39,7 +39,7 @@
   img: /images/sensibull.png
   order: 10
 - title: Kite-Zerodha
-  url:  https://www.kite.com/
+  url:  https://kite.zerodha.com/
   img: /images/kite.png
   order: 11
 - title: Streak
