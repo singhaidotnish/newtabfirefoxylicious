@@ -1,4 +1,8 @@
 - title: ChatGpt
+  url: https://singhaidotnish.github.io/wellness
+  img: /images/pms.png
+  order: 1
+- title: ChatGpt
   url: https://chatgpt.com
   img: /images/chatgpt.png
   order: 1
