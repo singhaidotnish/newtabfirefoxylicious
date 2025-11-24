@@ -5,24 +5,51 @@
 │   ├── _data
 │   │   └── tiles.yml
 │   ├── images
+│   │   ├── adhd-circuit-breaker.png
+│   │   ├── adhd-with-chris-and-debby.png
+│   │   ├── appler.png
 │   │   ├── bitwarden.png
 │   │   ├── chatgpt.png
+│   │   ├── claude.png
+│   │   ├── cloudinary.jpg
+│   │   ├── cursor-ai.png
+│   │   ├── decision-point.jpg
+│   │   ├── deepseek.jpeg
+│   │   ├── elemen.png
+│   │   ├── gear.png
 │   │   ├── github.png
 │   │   ├── gmail.jpg
 │   │   ├── gmail.webp
+│   │   ├── indranil.png
+│   │   ├── kite.png
+│   │   ├── makerbazar.png
+│   │   ├── meta-ai.jpeg
 │   │   ├── midjourney.png
+│   │   ├── neo-titanium-mp.jpg
 │   │   ├── nmmc.png
 │   │   ├── openai.jpg
-│   │   ├── profile_pic.png
+│   │   ├── pcloud.png
+│   │   ├── perplexity.png
+│   │   ├── pms.png
+│   │   ├── profile_pic.jpg
 │   │   ├── render.jpg
 │   │   ├── runwayml.jpg
+│   │   ├── search-console-google.png
+│   │   ├── sensibull.png
+│   │   ├── streak.jpg
+│   │   ├── tradetron.png
+│   │   ├── varsity-audio.jpg
+│   │   ├── whatsapp.png
+│   │   ├── y2mate.png
 │   │   ├── youtube-2.png
 │   │   └── youtube.png
 │   ├── index.html
 │   ├── _layouts
 │   │   └── default.html
+│   ├── radial-menu.js
+│   ├── settings.js
 │   └── styles.css
 ├── README.md
 └── tree-structure.txt
 
-4 directories, 21 files
+5 directories, 48 files
