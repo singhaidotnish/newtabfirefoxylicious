@@ -138,3 +138,7 @@
   url: https://www.youtube.com/live/dzTQsMs0bVc?si=5buECOHJ7wxs-zUg
   img: /images/cp.png
   order: 33
+- title: Console Cloud Google
+  url: https://console.cloud.google.com/
+  img: /images/google-cloud.jpeg
+  order: 33
