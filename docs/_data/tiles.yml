@@ -90,63 +90,55 @@
   url: https://platform.openai.com
   img: /images/openai.jpg
   order: 21
-- title: Google-Gemini
-  url: https://gemini.google.com/app?hl=en-IN
-  img: /images/google-gemini.png
-  order: 22
 - title: TradeTron
   url: https://tradetron.tech/login
   img: /images/tradetron.png
-  order: 23
+  order: 22
 - title: RunwayML
   url: https://app.runwayml.com/login
   img: /images/runwayml.jpg
-  order: 24
+  order: 23
 - title: Cloudinary
   url:  https://cloudinary.com/users/login
   img: /images/cloudinary.jpg
-  order: 25
+  order: 24
 - title: Jira - Elemen
   url:  https://elemen.atlassian.net/jira/projects?page=1&sortKey=name&sortOrder=ASC&types=software%2Cbusiness
   img: /images/elemen.png
-  order: 26
+  order: 25
 - title: Jira - Appler
   url:  https://appler.atlassian.net/jira/projects?page=1&sortKey=name&sortOrder=ASC&types=software%2Cbusiness
   img: /images/appler.png
-  order: 27
+  order: 26
 - title: pCloud
   url:  https://my.pcloud.com/
   img: /images/pcloud.png
-  order: 28
+  order: 27
 - title: MidJourney
   url: https://midjourney.com
   img: /images/midjourney.png
-  order: 29
+  order: 28
 - title: Blog+Resume
   url: https://nishith.is-a.dev
   img: /images/profile_pic.jpg
-  order: 30
+  order: 29
 - title: Render
   url: https://render.com
   img: /images/render.jpg
-  order: 31
+  order: 30
 - title: NMMC
   url:  https://www.nmmc.gov.in/property-tax
   img: /images/nmmc.png
-  order: 32
+  order: 31
 - title: ADHD-with-chris-and-debby
   url: https://youtu.be/ZlFSeamEJbA?si=QCEArkeHXGzNTNIy
   img: /images/adhd-with-chris-and-debby.png
-  order: 33
+  order: 32
 - title: Christian Prince
   url: https://www.youtube.com/live/dzTQsMs0bVc?si=5buECOHJ7wxs-zUg
   img: /images/cp.png
-  order: 34
+  order: 33
 - title: Console Cloud Google
   url: https://console.cloud.google.com/
   img: /images/google-cloud.jpeg
-<<<<<<< HEAD
-  order: 35
-=======
-  order: 33
->>>>>>> parent of 368b8b0 (Update tiles.yml)
+  order: 34
