@@ -90,10 +90,14 @@
   url: https://platform.openai.com
   img: /images/openai.jpg
   order: 21
+- title: Google-Gemini
+  url: https://gemini.google.com/app?hl=en-IN
+  img: /images/google-gemini.png
+  order: 22
 - title: TradeTron
   url: https://tradetron.tech/login
   img: /images/tradetron.png
-  order: 22
+  order: 23
 - title: RunwayML
   url: https://app.runwayml.com/login
   img: /images/runwayml.jpg
