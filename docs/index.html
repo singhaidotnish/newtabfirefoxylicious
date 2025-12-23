@@ -2,9 +2,22 @@
 layout: default
 title: My Start
 ---
-{% assign all_pins = site.data.tiles.pins | sort: 'order' %}
-{% assign main_pins = all_pins | where_exp: "pin", "pin.position != 'extra-1' and pin.position != 'extra-2'" %}
-{% assign category_pins = all_pins | where: "isCategoryPin", true %}
+
+{% comment %} Get all pins data {% endcomment %}
+{% assign all_pins = site.data.tiles.pins %}
+{% assign sorted_pins = all_pins | sort: 'order' %}
+
+{% comment %} Separate pins for layout {% endcomment %}
+{% assign main_pins = "" | split: "" %}
+{% assign category_pins = "" | split: "" %}
+
+{% for pin in sorted_pins %}
+  {% if pin.isCategoryPin == true %}
+    {% assign category_pins = category_pins | push: pin %}
+  {% else %}
+    {% assign main_pins = main_pins | push: pin %}
+  {% endif %}
+{% endfor %}
 
 <div class="pinterest-radial-container">
   <div class="radial-menu">
@@ -16,21 +29,25 @@ title: My Start
     <!-- Center "Start" Button -->
     <div class="center-start">Start</div>
     
-    <!-- Main Pins (exactly matching image layout) -->
-    {% for pin in main_pins %}
-      {% if pin.position %}
-        <div class="pin-card pos-{{ pin.position }} category-{{ pin.category }}" 
+    <!-- Main Pins (matching your image layout) -->
+    <!-- Position mapping for 15 pins exactly like your image -->
+    {% assign positions = "top,right,bottom,left,ne,se,sw,nw,outer-top,outer-right,outer-bottom,outer-left,outer-ne,outer-se,outer-sw" | split: "," %}
+    
+    {% for i in (0..14) %}
+      {% assign pin = main_pins[i] %}
+      {% if pin %}
+        {% assign position = positions[i] %}
+        <div class="pin-card pos-{{ position }} category-{{ pin.category }}" 
              data-category="{{ pin.category }}"
              data-id="{{ pin.id }}"
+             data-url="{{ pin.url }}"
              style="--pin-color: {{ pin.color | default: '#e60023' }}">
           
           <button class="pin-save">📌</button>
           
           <div class="pin-header">
             {% if pin.img %}
-              <img class="pin-icon" src="{{ pin.img | relative_url }}" alt="{{ pin.name }}"
-                   onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="pin-emoji" style="display:none">{{ pin.emoji | default: '📌' }}</span>
+              <img class="pin-icon" src="{{ pin.img | relative_url }}" alt="{{ pin.name }}">
             {% else %}
               <span class="pin-emoji">{{ pin.emoji | default: '📌' }}</span>
             {% endif %}
@@ -42,25 +59,11 @@ title: My Start
               {% endif %}
             </div>
           </div>
-          
-          <!-- Hidden data for category expansion -->
-          <div class="pin-data" style="display: none;">
-            {% assign category_pins_list = all_pins | where: "category", pin.category %}
-            {% for cat_pin in category_pins_list %}
-              <div class="category-item" 
-                   data-name="{{ cat_pin.name }}"
-                   data-url="{{ cat_pin.url }}"
-                   data-emoji="{{ cat_pin.emoji }}"
-                   data-img="{{ cat_pin.img }}"
-                   data-color="{{ cat_pin.color }}">
-              </div>
-            {% endfor %}
-          </div>
         </div>
       {% endif %}
     {% endfor %}
     
-    <!-- Category Pins (YouTube & AI) -->
+    <!-- Category Pins (YouTube & AI) - placed in extra positions -->
     {% for cat_pin in category_pins %}
       <div class="pin-card pos-extra-{{ forloop.index }} category-pin category-{{ cat_pin.category }}"
            data-category="{{ cat_pin.category }}"
