@@ -2,10 +2,13 @@
 layout: default
 title: My Start
 ---
+{% assign all_pins = site.data.tiles.pins | sort: 'order' %}
+{% assign main_pins = all_pins | where_exp: "pin", "pin.position != 'extra-1' and pin.position != 'extra-2'" %}
+{% assign category_pins = all_pins | where: "isCategoryPin", true %}
 
 <div class="pinterest-radial-container">
   <div class="radial-menu">
-    <!-- Orbits for visual reference -->
+    <!-- Visual orbits -->
     <div class="radial-orbit orbit-1"></div>
     <div class="radial-orbit orbit-2"></div>
     <div class="radial-orbit orbit-3"></div>
@@ -13,27 +16,100 @@ title: My Start
     <!-- Center "Start" Button -->
     <div class="center-start">Start</div>
     
-    <!-- Dynamic Pin Cards Container -->
-    <div class="pin-cards-container" data-pins="{{ site.data.tiles.pins | jsonify | escape }}">
-      <!-- Pins will be dynamically inserted here by JavaScript -->
+    <!-- Main Pins (exactly matching image layout) -->
+    {% for pin in main_pins %}
+      {% if pin.position %}
+        <div class="pin-card pos-{{ pin.position }} category-{{ pin.category }}" 
+             data-category="{{ pin.category }}"
+             data-id="{{ pin.id }}"
+             style="--pin-color: {{ pin.color | default: '#e60023' }}">
+          
+          <button class="pin-save">📌</button>
+          
+          <div class="pin-header">
+            {% if pin.img %}
+              <img class="pin-icon" src="{{ pin.img | relative_url }}" alt="{{ pin.name }}"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="pin-emoji" style="display:none">{{ pin.emoji | default: '📌' }}</span>
+            {% else %}
+              <span class="pin-emoji">{{ pin.emoji | default: '📌' }}</span>
+            {% endif %}
+            
+            <div class="pin-text">
+              <div class="pin-title">{{ pin.name }}</div>
+              {% if pin.subtitle %}
+                <div class="pin-subtitle">{{ pin.subtitle }}</div>
+              {% endif %}
+            </div>
+          </div>
+          
+          <!-- Hidden data for category expansion -->
+          <div class="pin-data" style="display: none;">
+            {% assign category_pins = all_pins | where: "category", pin.category %}
+            {% for cat_pin in category_pins %}
+              <div class="category-item" 
+                   data-name="{{ cat_pin.name }}"
+                   data-url="{{ cat_pin.url }}"
+                   data-emoji="{{ cat_pin.emoji }}"
+                   data-img="{{ cat_pin.img }}"
+                   data-color="{{ cat_pin.color }}"></div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+    
+    <!-- Category Pins (YouTube & AI) -->
+    {% for cat_pin in category_pins %}
+      <div class="pin-card pos-extra-{{ forloop.index }} category-pin category-{{ cat_pin.category }}"
+           data-category="{{ cat_pin.category }}"
+           data-id="{{ cat_pin.id }}"
+           style="--pin-color: {{ cat_pin.color | default: '#e60023' }}">
+        
+        <div class="pin-badge">🎯</div>
+        <button class="pin-save">📌</button>
+        
+        <div class="pin-header">
+          {% if cat_pin.img %}
+            <img class="pin-icon" src="{{ cat_pin.img | relative_url }}" alt="{{ cat_pin.name }}">
+          {% else %}
+            <span class="pin-emoji">{{ cat_pin.emoji | default: '📌' }}</span>
+          {% endif %}
+          
+          <div class="pin-text">
+            <div class="pin-title">{{ cat_pin.name }}</div>
+            <div class="pin-subtitle">Click for more</div>
+          </div>
+        </div>
+        
+        <!-- Category expansion items will be loaded dynamically -->
+      </div>
+    {% endfor %}
+    
+    <!-- Category Expansion Overlay -->
+    <div class="category-expansion-overlay" id="categoryOverlay">
+      <div class="expansion-container">
+        <div class="expansion-header">
+          <h3 class="expansion-title"></h3>
+          <button class="expansion-close">×</button>
+        </div>
+        <div class="expansion-grid" id="expansionGrid"></div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- Template for pin cards (hidden) -->
-<template id="pin-template">
-  <div class="pin-card">
-    <button class="pin-save">📌</button>
-    <div class="pin-header">
-      <div class="pin-icon-container">
-        <!-- Image or emoji will be inserted here -->
-      </div>
-      <div class="pin-text">
-        <div class="pin-title"></div>
-        <div class="pin-subtitle"></div>
-      </div>
+<!-- Template for expansion items -->
+<template id="expansionItemTemplate">
+  <div class="expansion-pin">
+    <div class="expansion-pin-header">
+      <img class="expansion-icon" src="" alt="">
+      <span class="expansion-emoji"></span>
     </div>
+    <div class="expansion-pin-title"></div>
+    <div class="expansion-pin-url"></div>
   </div>
 </template>
 
-<script src="{{ '/radial-generator.js' | relative_url }}" defer></script>
+<script src="{{ '/category-expander.js' | relative_url }}" defer></script>
+<script src="{{ '/radial-menu.js' | relative_url }}" defer></script>
