@@ -3,16 +3,41 @@ layout: default
 title: My Start
 ---
 
-<div class="wrap">
-  <h1>Start</h1>
-
-  <div class="grid">
-    {% assign tiles = site.data.tiles | sort: 'order' %}
-    {% for t in tiles %}
-      <div class="tile">
-        <img src="{{ t.img | relative_url }}" alt="">
-        <a href="{{ t.url }}"><span class="label">{{ t.title }}</span></a>
+<main class="pinterest-container">
+  <!-- Pinterest Radial Menu -->
+  <div class="radial-menu-wrapper">
+    <div class="radial-menu">
+      <!-- Center Pin -->
+      <div class="center-pin">
+        <div class="pin-icon">📌</div>
+        <div class="pin-label">Start</div>
       </div>
-    {% endfor %}
+      
+      <!-- Pin Items will be dynamically added here -->
+      <div class="pin-items-container">
+        {% assign pins = site.data.tiles.pins | sort: 'order' %}
+        {% for pin in pins %}
+        <div class="pin-item" data-order="{{ pin.order }}">
+          <div class="pin-card" style="--pin-color: {{ pin.color | default: '#e60023' }}">
+            <button class="pin-save-btn" aria-label="Save">📌</button>
+            
+            {% if pin.img %}
+              <img class="pin-icon-image" src="{{ pin.img | relative_url }}" alt="{{ pin.name }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="pin-emoji" style="display:none">{{ pin.emoji | default: '📌' }}</span>
+            {% else %}
+              <span class="pin-emoji">{{ pin.emoji | default: '📌' }}</span>
+            {% endif %}
+            
+            <div class="pin-title">{{ pin.name }}</div>
+            {% if pin.subtitle %}
+              <div class="pin-subtitle">{{ pin.subtitle }}</div>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
   </div>
-</div>
+</main>
+
+<script src="{{ '/radial-menu.js' | relative_url }}" defer></script>
