@@ -2,42 +2,43 @@
 layout: default
 title: My Start
 ---
+{% assign pins = site.data.tiles.pins | sort: 'order' %}
+{% assign positions = "top,right,bottom,left,ne,se,sw,nw,outer-top,outer-right,outer-bottom,outer-left,outer-ne,outer-se,outer-sw,outer-nw" | split: "," %}
 
-<main class="pinterest-container">
-  <!-- Pinterest Radial Menu -->
-  <div class="radial-menu-wrapper">
-    <div class="radial-menu">
-      <!-- Center Pin -->
-      <div class="center-pin">
-        <div class="pin-icon">📌</div>
-        <div class="pin-label">Start</div>
-      </div>
+<div class="pinterest-radial-container">
+  <div class="radial-menu">
+    <!-- Orbits -->
+    <div class="radial-orbit orbit-1"></div>
+    <div class="radial-orbit orbit-2"></div>
+    <div class="radial-orbit orbit-3"></div>
+    
+    <!-- Center -->
+    <div class="center-start">Start</div>
+    
+    <!-- Dynamic Pins -->
+    {% for pin in pins %}
+      {% assign pos_index = forloop.index0 %}
+      {% assign position = pin.position | default: positions[pos_index] %}
       
-      <!-- Pin Items will be dynamically added here -->
-      <div class="pin-items-container">
-        {% assign pins = site.data.tiles.pins | sort: 'order' %}
-        {% for pin in pins %}
-        <div class="pin-item" data-order="{{ pin.order }}">
-          <div class="pin-card" style="--pin-color: {{ pin.color | default: '#e60023' }}">
-            <button class="pin-save-btn" aria-label="Save">📌</button>
-            
-            {% if pin.img %}
-              <img class="pin-icon-image" src="{{ pin.img | relative_url }}" alt="{{ pin.name }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="pin-emoji" style="display:none">{{ pin.emoji | default: '📌' }}</span>
-            {% else %}
-              <span class="pin-emoji">{{ pin.emoji | default: '📌' }}</span>
-            {% endif %}
-            
+      <div class="pin-card pos-{{ position }}" style="--pin-color: {{ pin.color | default: '#e60023' }}">
+        <button class="pin-save">📌</button>
+        <div class="pin-header">
+          {% if pin.img %}
+            <img class="pin-image" src="{{ pin.img | relative_url }}" alt="{{ pin.name }}"
+                 onerror="this.style.display='none'; this.parentElement.innerHTML += '<span class=\'pin-emoji\'>{{ pin.emoji | default: \"📌\" }}</span>'">
+          {% else %}
+            <span class="pin-emoji">{{ pin.emoji | default: '📌' }}</span>
+          {% endif %}
+          <div class="pin-text">
             <div class="pin-title">{{ pin.name }}</div>
             {% if pin.subtitle %}
               <div class="pin-subtitle">{{ pin.subtitle }}</div>
             {% endif %}
           </div>
         </div>
-        {% endfor %}
       </div>
-    </div>
+    {% endfor %}
   </div>
-</main>
+</div>
 
 <script src="{{ '/radial-menu.js' | relative_url }}" defer></script>

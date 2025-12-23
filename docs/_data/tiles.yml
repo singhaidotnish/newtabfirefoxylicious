@@ -1,357 +1,190 @@
 # docs/_data/tiles.yml
+# Pins positioned exactly like your image
 pins:
-  - id: indranil-guha
-    name: Indranil Guha
-    subtitle: "Options Trade"
-    emoji: "📈"
+  # First Ring (close to center) - 4 items
+  - name: Varsity Audio
+    emoji: 🎵
     color: "#1e40af"
-    url: "https://youtube.com/@indraanilguha?si=0ozXihBXTMBJtQCA"
-    category: "trading"
-    img: /images/indranil.png
-    order: 1
-
-  - id: varsity-audio
-    name: Varsity Audio
-    subtitle: "Zerodha Modules"
-    emoji: "🎵"
-    color: "#3b82f6"
     url: https://varsity-audio-monorepo-cjpj.onrender.com
     img: /images/varsity-audio.jpg
-    category: "learning"
-    order: 2
+    position: top
+    order: 1
+    category: media
 
-  - id: adhd-circuit
-    name: ADHD-Circuit
-    subtitle: "Broader Wellness"
-    emoji: "🧠"
+  - name: ADHD-Circuit
+    subtitle: Broader Wellness
+    emoji: 🧠
     color: "#059669"
     url: https://singhaidotnish.github.io/adhd-circuit-breaker
     img: /images/adhd-circuit-breaker.png
-    category: "wellness"
-    order: 3
+    position: right
+    order: 2
+    category: wellness
 
-  - id: wellness
-    name: Wellness
-    emoji: "🌿"
+  - name: Wellness
+    emoji: 🌿
     color: "#10b981"
     url: https://singhaidotnish.github.io/wellness
     img: /images/pms.png
-    category: "wellness"
-    order: 4
+    position: bottom
+    order: 3
+    category: wellness
 
-  - id: chatgpt
-    name: ChatGPT
-    emoji: "🤖"
-    color: "#10a37f"
+  - name: ChatOpt
+    emoji: 💬
+    color: "#7c3aed"
     url: https://chatgpt.com
     img: /images/chatgpt.png
-    category: "ai"
-    order: 5
+    position: left
+    order: 4
+    category: ai
 
-  - id: claude
-    name: Claude.ai
-    emoji: "📚"
+  # Second Ring - 4 items
+  - name: Claude
+    emoji: 🤖
     color: "#f59e0b"
     url: https://claude.ai/
     img: /images/claude.png
-    category: "ai"
-    order: 6
+    position: ne
+    order: 5
+    category: ai
 
-  - id: cursor
-    name: Cursor AI
-    subtitle: "Code Editor"
-    emoji: "⌨️"
+  - name: CURSOR
+    emoji: ⌨️
     color: "#3b82f6"
     url: https://cursor.com/
     img: /images/cursor-ai.png
-    category: "dev"
-    order: 7
+    position: se
+    order: 6
+    category: dev
 
-  - id: github
-    name: GitHub
-    emoji: "🐙"
+  - name: Claude ai
+    emoji: 📚
+    color: "#f59e0b"
+    url: https://claude.ai/
+    img: /images/claude.png
+    position: sw
+    order: 7
+    category: ai
+
+  - name: Cursor Code editor
+    emoji: 💻
+    color: "#3b82f6"
+    url: https://cursor.com/
+    img: /images/cursor-ai.png
+    position: nw
+    order: 8
+    category: dev
+
+  # Third Ring (outer) - 7 items
+  - name: Git
+    emoji: 🐙
     color: "#333333"
     url: https://github.com
     img: /images/github.png
-    category: "dev"
-    order: 8
-
-  - id: youtube
-    name: YouTube
-    emoji: "📺"
-    color: "#ff0000"
-    url: https://youtube.com
-    img: /images/youtube-2.png
-    category: "media"
+    position: outer-top
     order: 9
+    category: dev
 
-  - id: mp3-download
-    name: Y2Mate
-    subtitle: "MP3 from YouTube"
-    emoji: "🎵"
+  - name: Virtual
+    subtitle: VMEG
+    emoji: 🖥️
+    color: "#8b5cf6"
+    url: "#"
+    img: /images/gear.png
+    position: outer-right
+    order: 10
+    category: tools
+
+  - name: MP3 from youtube
+    emoji: 🎵
     color: "#ef4444"
     url: https://y2mate.nu/R2lu/
     img: /images/y2mate.png
-    category: "tools"
-    order: 10
+    position: outer-bottom
+    order: 11
+    category: tools
 
-  - id: decision-point
-    name: Decision Point
-    subtitle: "Technical Analysis"
-    emoji: "📊"
+  - name: DESCISION
+    subtitle: Decision Point
+    emoji: ⚖️
     color: "#8b5cf6"
     url: https://youtube.com/@decisionpointorg?si=zHr7l9zunMz_WTAS
     img: /images/decision-point.jpg
-    category: "trading"
-    order: 11
+    position: outer-left
+    order: 12
+    category: trading
 
-  - id: bitwarden
-    name: Bitwarden
-    subtitle: "Password Manager"
-    emoji: "🔐"
-    color: "#175ddc"
+  - name: Security
+    emoji: 🔒
+    color: "#64748b"
     url: https://vault.bitwarden.com/#/login
     img: /images/bitwarden.png
-    category: "security"
-    order: 12
-
-  - id: whatsapp
-    name: WhatsApp Web
-    emoji: "💬"
-    color: "#25d366"
-    url: https://web.whatsapp.com/
-    img: /images/whatsapp.png
-    category: "social"
+    position: outer-ne
     order: 13
+    category: security
 
-  - id: sensibull
-    name: Sensibull
-    subtitle: "Options Platform"
-    emoji: "📈"
+  - name: Sensibull
+    emoji: 📈
     color: "#f59e0b"
     url: https://www.sensibull.com/
     img: /images/sensibull.png
-    category: "trading"
+    position: outer-se
     order: 14
+    category: trading
 
-  - id: kite
-    name: Kite Zerodha
-    subtitle: "Trading Platform"
-    emoji: "🪁"
+  - name: Kite-Zenobia
+    emoji: 🪁
     color: "#387ed1"
     url: https://kite.zerodha.com/
     img: /images/kite.png
-    category: "trading"
+    position: outer-sw
     order: 15
+    category: trading
 
-  - id: streak
-    name: Streak
-    subtitle: "Trading Journal"
-    emoji: "📈"
+  # Additional pins from your original list (will be added dynamically in remaining positions)
+  - name: WhatsApp
+    emoji: 💬
+    color: "#25d366"
+    url: https://web.whatsapp.com/
+    img: /images/whatsapp.png
+    position: outer-nw
+    order: 16
+    category: social
+
+  - name: Streak
+    subtitle: Trading Journal
+    emoji: 📈
     color: "#7c3aed"
     url: https://www.streak.tech/login
     img: /images/streak.jpg
-    category: "trading"
-    order: 16
+    position: extra-1
+    order: 17
+    category: trading
 
-  - id: deepseek
-    name: DeepSeek
-    emoji: "🔍"
+  - name: DeepSeek
+    emoji: 🔍
     color: "#1a1a1a"
     url: https://chat.deepseek.com/sign_in
     img: /images/deepseek.jpeg
-    category: "ai"
-    order: 17
+    position: extra-2
+    order: 18
+    category: ai
 
-  - id: perplexity
-    name: Perplexity AI
-    emoji: "🤔"
+  - name: Perplexity
+    emoji: 🤔
     color: "#0d9488"
     url: https://www.perplexity.ai/?login
     img: /images/perplexity.png
-    category: "ai"
-    order: 18
+    position: extra-3
+    order: 19
+    category: ai
 
-  - id: meta-ai
-    name: Meta AI
-    emoji: "✨"
+  - name: Meta AI
+    emoji: ✨
     color: "#0084ff"
     url: https://www.meta.ai/
     img: /images/meta-ai.jpeg
-    category: "ai"
-    order: 19
-
-  - id: search-console
-    name: Google Search Console
-    emoji: "🔍"
-    color: "#4285f4"
-    url: https://search.google.com/search-console?resource_id=https%3A%2F%2Fnishith.is-a.dev%2F
-    img: /images/search-console-google.png
-    category: "dev"
+    position: extra-4
     order: 20
-
-  - id: gmail
-    name: Gmail
-    emoji: "📧"
-    color: "#ea4335"
-    url: https://mail.google.com
-    img: /images/gmail.jpg
-    category: "productivity"
-    order: 21
-
-  - id: makerbazar
-    name: MakerBazar
-    subtitle: "Electronic Components"
-    emoji: "⚡"
-    color: "#10b981"
-    url: https://makerbazar.in
-    img: /images/makerbazar.png
-    category: "shopping"
-    order: 22
-
-  - id: openai
-    name: OpenAI Platform
-    emoji: "🧠"
-    color: "#10a37f"
-    url: https://platform.openai.com
-    img: /images/openai.jpg
-    category: "ai"
-    order: 23
-
-  - id: gemini
-    name: Google Gemini
-    emoji: "💎"
-    color: "#4285f4"
-    url: https://gemini.google.com/app?hl=en-IN
-    img: /images/google-gemini.png
-    category: "ai"
-    order: 24
-
-  - id: tradetron
-    name: TradeTron
-    subtitle: "Algorithmic Trading"
-    emoji: "🤖"
-    color: "#3b82f6"
-    url: https://tradetron.tech/login
-    img: /images/tradetron.png
-    category: "trading"
-    order: 25
-
-  - id: runwayml
-    name: RunwayML
-    subtitle: "AI Video Tools"
-    emoji: "🎬"
-    color: "#000000"
-    url: https://app.runwayml.com/login
-    img: /images/runwayml.jpg
-    category: "ai"
-    order: 26
-
-  - id: cloudinary
-    name: Cloudinary
-    subtitle: "Media Management"
-    emoji: "☁️"
-    color: "#3448c5"
-    url: https://cloudinary.com/users/login
-    img: /images/cloudinary.jpg
-    category: "dev"
-    order: 27
-
-  - id: elemen-jira
-    name: Elemen Jira
-    subtitle: "Project Management"
-    emoji: "📋"
-    color: "#0052cc"
-    url: https://elemen.atlassian.net/jira/projects?page=1&sortKey=name&sortOrder=ASC&types=software%2Cbusiness
-    img: /images/elemen.png
-    category: "work"
-    order: 28
-
-  - id: appler-jira
-    name: Appler Jira
-    subtitle: "Project Management"
-    emoji: "🍎"
-    color: "#ff3b30"
-    url: https://appler.atlassian.net/jira/projects?page=1&sortKey=name&sortOrder=ASC&types=software%2Cbusiness
-    img: /images/appler.png
-    category: "work"
-    order: 29
-
-  - id: pcloud
-    name: pCloud
-    subtitle: "Cloud Storage"
-    emoji: "☁️"
-    color: "#e74c3c"
-    url: https://my.pcloud.com/
-    img: /images/pcloud.png
-    category: "storage"
-    order: 30
-
-  - id: midjourney
-    name: MidJourney
-    subtitle: "AI Image Generation"
-    emoji: "🎨"
-    color: "#1a1a1a"
-    url: https://midjourney.com
-    img: /images/midjourney.png
-    category: "ai"
-    order: 31
-
-  - id: blog
-    name: Blog + Resume
-    subtitle: "nishith.is-a.dev"
-    emoji: "📝"
-    color: "#6b7280"
-    url: https://nishith.is-a.dev
-    img: /images/profile_pic.jpg
-    category: "personal"
-    order: 32
-
-  - id: render
-    name: Render
-    subtitle: "Cloud Hosting"
-    emoji: "🚀"
-    color: "#46b3a3"
-    url: https://render.com
-    img: /images/render.jpg
-    category: "dev"
-    order: 33
-
-  - id: nmmc
-    name: NMMC
-    subtitle: "Property Tax"
-    emoji: "🏛️"
-    color: "#1e40af"
-    url: https://www.nmmc.gov.in/property-tax
-    img: /images/nmmc.png
-    category: "utility"
-    order: 34
-
-  - id: adhd-chris-debby
-    name: ADHD Discussion
-    subtitle: "Chris and Debby"
-    emoji: "🎥"
-    color: "#059669"
-    url: https://youtu.be/ZlFSeamEJbA?si=QCEArkeHXGzNTNIy
-    img: /images/adhd-with-chris-and-debby.png
-    category: "wellness"
-    order: 35
-
-  - id: christian-prince
-    name: Christian Prince
-    subtitle: "Apologetics"
-    emoji: "✝️"
-    color: "#7c3aed"
-    url: https://www.youtube.com/live/dzTQsMs0bVc?si=5buECOHJ7wxs-zUg
-    img: /images/cp.png
-    category: "media"
-    order: 36
-
-  - id: google-cloud
-    name: Google Cloud Console
-    emoji: "☁️"
-    color: "#4285f4"
-    url: https://console.cloud.google.com/
-    img: /images/google-cloud.jpeg
-    category: "dev"
-    order: 37
+    category: ai
