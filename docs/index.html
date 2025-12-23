@@ -2,43 +2,38 @@
 layout: default
 title: My Start
 ---
-{% assign pins = site.data.tiles.pins | sort: 'order' %}
-{% assign positions = "top,right,bottom,left,ne,se,sw,nw,outer-top,outer-right,outer-bottom,outer-left,outer-ne,outer-se,outer-sw,outer-nw" | split: "," %}
 
 <div class="pinterest-radial-container">
   <div class="radial-menu">
-    <!-- Orbits -->
+    <!-- Orbits for visual reference -->
     <div class="radial-orbit orbit-1"></div>
     <div class="radial-orbit orbit-2"></div>
     <div class="radial-orbit orbit-3"></div>
     
-    <!-- Center -->
+    <!-- Center "Start" Button -->
     <div class="center-start">Start</div>
     
-    <!-- Dynamic Pins -->
-    {% for pin in pins %}
-      {% assign pos_index = forloop.index0 %}
-      {% assign position = pin.position | default: positions[pos_index] %}
-      
-      <div class="pin-card pos-{{ position }}" style="--pin-color: {{ pin.color | default: '#e60023' }}">
-        <button class="pin-save">📌</button>
-        <div class="pin-header">
-          {% if pin.img %}
-            <img class="pin-image" src="{{ pin.img | relative_url }}" alt="{{ pin.name }}"
-                 onerror="this.style.display='none'; this.parentElement.innerHTML += '<span class=\'pin-emoji\'>{{ pin.emoji | default: \"📌\" }}</span>'">
-          {% else %}
-            <span class="pin-emoji">{{ pin.emoji | default: '📌' }}</span>
-          {% endif %}
-          <div class="pin-text">
-            <div class="pin-title">{{ pin.name }}</div>
-            {% if pin.subtitle %}
-              <div class="pin-subtitle">{{ pin.subtitle }}</div>
-            {% endif %}
-          </div>
-        </div>
-      </div>
-    {% endfor %}
+    <!-- Dynamic Pin Cards Container -->
+    <div class="pin-cards-container" data-pins="{{ site.data.tiles.pins | jsonify | escape }}">
+      <!-- Pins will be dynamically inserted here by JavaScript -->
+    </div>
   </div>
 </div>
 
-<script src="{{ '/radial-menu.js' | relative_url }}" defer></script>
+<!-- Template for pin cards (hidden) -->
+<template id="pin-template">
+  <div class="pin-card">
+    <button class="pin-save">📌</button>
+    <div class="pin-header">
+      <div class="pin-icon-container">
+        <!-- Image or emoji will be inserted here -->
+      </div>
+      <div class="pin-text">
+        <div class="pin-title"></div>
+        <div class="pin-subtitle"></div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script src="{{ '/radial-generator.js' | relative_url }}" defer></script>
