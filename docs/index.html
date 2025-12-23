@@ -45,14 +45,15 @@ title: My Start
           
           <!-- Hidden data for category expansion -->
           <div class="pin-data" style="display: none;">
-            {% assign category_pins = all_pins | where: "category", pin.category %}
-            {% for cat_pin in category_pins %}
+            {% assign category_pins_list = all_pins | where: "category", pin.category %}
+            {% for cat_pin in category_pins_list %}
               <div class="category-item" 
                    data-name="{{ cat_pin.name }}"
                    data-url="{{ cat_pin.url }}"
                    data-emoji="{{ cat_pin.emoji }}"
                    data-img="{{ cat_pin.img }}"
-                   data-color="{{ cat_pin.color }}"></div>
+                   data-color="{{ cat_pin.color }}">
+              </div>
             {% endfor %}
           </div>
         </div>
@@ -81,8 +82,6 @@ title: My Start
             <div class="pin-subtitle">Click for more</div>
           </div>
         </div>
-        
-        <!-- Category expansion items will be loaded dynamically -->
       </div>
     {% endfor %}
     
