@@ -1,0 +1,58 @@
+.
+├── docs
+│   ├── bg.js
+│   ├── _config.yml
+│   ├── _data
+│   │   └── tiles.yml
+│   ├── images
+│   │   ├── adhd-circuit-breaker.png
+│   │   ├── adhd-with-chris-and-debby.png
+│   │   ├── appler.png
+│   │   ├── bitwarden.png
+│   │   ├── chatgpt.png
+│   │   ├── claude.png
+│   │   ├── cloudinary.jpg
+│   │   ├── cursor-ai.png
+│   │   ├── decision-point.jpg
+│   │   ├── deepseek.jpeg
+│   │   ├── elemen.png
+│   │   ├── gear.png
+│   │   ├── github.png
+│   │   ├── gmail.jpg
+│   │   ├── gmail.webp
+│   │   ├── google-cloud.jpeg
+│   │   ├── google-gemini.png
+│   │   ├── indranil.png
+│   │   ├── kite.png
+│   │   ├── makerbazar.png
+│   │   ├── meta-ai.jpeg
+│   │   ├── midjourney.png
+│   │   ├── neo-titanium-mp.jpg
+│   │   ├── nmmc.png
+│   │   ├── openai.jpg
+│   │   ├── pcloud.png
+│   │   ├── perplexity.png
+│   │   ├── pms.png
+│   │   ├── profile_pic.jpg
+│   │   ├── render.jpg
+│   │   ├── runwayml.jpg
+│   │   ├── search-console-google.png
+│   │   ├── sensibull.png
+│   │   ├── streak.jpg
+│   │   ├── tradetron.png
+│   │   ├── varsity-audio.jpg
+│   │   ├── whatsapp.png
+│   │   ├── y2mate.png
+│   │   ├── youtube-2.png
+│   │   └── youtube.png
+│   ├── index.html
+│   ├── _layouts
+│   │   └── default.html
+│   ├── radial-menu.js
+│   ├── settings.js
+│   └── styles.css
+├── README.md
+├── stucture.txt
+└── tree-structure.txt
+
+5 directories, 51 files
